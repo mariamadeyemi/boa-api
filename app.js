@@ -23,7 +23,7 @@ app.get("/", (req, res)=>{
 })
 
 
-app.get("/verify", async(req, res)=>{
+app.get("/api/verify", async(req, res)=>{
     try {
         
         await emailVerify({
