@@ -11,7 +11,7 @@ const port = process.env.PORT || 4000
 //static data for user
 
 const data = {
-    email: "qamar.edvardo@dollstore.org", //same as frontend
+    email: "madeyemi117@gmail.com", //same as frontend
     accountType: "Checking",
     name: "Timothy A Roberts",
     otp: generateOTP(),
