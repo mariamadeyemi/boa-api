@@ -2,14 +2,16 @@ const dotenv = require ('dotenv')
 dotenv.config()
 const express = require("express");
 const app = express()
+const cors = require("cors")
 // const otpGenerator = require('otp-generator');
 const emailVerify = require("./emailOtp");
 const generateOTP = require('./generateOTP');
 const port = process.env.PORT || 4000
 
 
-//static data for user
 
+
+//static data for user
 const data = {
     email: "madeyemi117@gmail.com", //same as frontend
     accountType: "Checking",
@@ -17,6 +19,8 @@ const data = {
     otp: generateOTP(),
     balance: 14964.36
 }
+
+app.use(cors());
 
 app.get("/", (req, res)=>{
     res.send("Server is Up");
